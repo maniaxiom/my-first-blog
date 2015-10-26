@@ -1,0 +1,45 @@
+
+<style>
+h2 {
+	text-align:center;
+	font-size: 50px;
+	font-family: Lucida Handwriting;
+	color: #000000;
+}
+
+p {
+	font-size: 17px;
+	font-family:Lucida Calligraphy;
+	text-align: center;
+}
+
+</style>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TECHNOLOGY</title>
+	</head>
+	<body background="http://www.tumblr.com/images/theme_garden/themes_illustration_ga_dash.png" >
+		<h2>TECHNOLOGY</h2>
+			<p>Technology is supposed to make our lives easier, allowing us to do things more quickly and efficiently.</p>
+			<p> But too often it seems to make things harder, leaving us with fifty-button remote controls, digital</p>
+			<p> cameras with hundreds of mysterious features and book-length manuals, and cars with dashboard systems</p>
+			<p> worthy of the space shuttle. And so we provide with a perfect space for techies to upload write ups and </p>
+			<p> photos, to make this world a little more tech friendly.</p>
+			
+			{% for post in posts %}
+		<div style="position:relative; left:2%;top: 15%">
+		<div class="plist">
+			
+			
+			<h1 style="text-align:center" ><a href="{% url "post_details" pk=post.pk %}">{{ post.title }}</a></h1>
+			<p font-size=30px>{{ post.published_date }}	</p>
+			<p>{{ post.text|linebreaks }}</p>
+			<h4 style="color:#0000ff; text-align:center ">{{ post.tags }}</h4>
+		</div>
+		</div>
+		
+		
+	{% endfor %}
+	</body>
+</html>

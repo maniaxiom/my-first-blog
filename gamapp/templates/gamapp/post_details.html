@@ -1,0 +1,20 @@
+{% extends "gamapp/base.html" %}
+
+{% block content %}
+    <div class="post">
+        <a class="btn btn-default" href="{% url "post_edit" pk=post.pk %}"><p>Edit Post</p></a>
+		<div class="ptitle">
+			<h1>{{ post.title }}</h1>
+		</div>
+		{% if post.published_date %}
+		<div class="ptitle">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+		</div>
+        {% endif %}
+		<div class="plist">
+			<p>{{ post.text|linebreaks }}</p>
+		</div>
+	</div>
+{% endblock %}

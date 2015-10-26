@@ -1,0 +1,46 @@
+<style>
+h2 {
+	text-align: center;
+	font-size: 50px;
+	font-family: Lucida Handwriting;
+	color: #000000;
+}
+
+p {
+	margin-left: 10px;
+	font-size: 25px;
+	text-align: center;
+	color: #000000;
+	font-family: cursive;
+}
+@media only screen and (max-width: 1500px) {
+body {
+	background: url(http://41.media.tumblr.com/tumblr_m9opgmhd7q1rfqfcao1_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+	}	
+}
+</style>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TRAVEL</title>
+	</head>
+	<body background="http://41.media.tumblr.com/tumblr_m9opgmhd7q1rfqfcao1_1280.jpg"/>
+		<h2>TRAVEL</h2>
+			<p>The use of traveling is to regulate imagination with reality, and instead of thinking</p> 
+			<p>of how things may be, see them as they are. This particular travel blog platform gives </p>
+			<p>the world of travelling and exploring a whole new dimension. With personal experiences, </p>
+			<p> classic timeless photos from around the world and much more, this place will let you</p>
+			<p> travel the world at just a click.</p>
+
+			
+			<h1 style="position:absolute; left:43%"> New Blog Post </h1>
+	<div style="position:absolute; top:78%; left:35%"><form method="POST" class = "post-form">{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="save btn btn-default" style="position:absolute; left:48%"> Save Post </button>
+	</form>
+
+	</body>
+</html>

@@ -1,0 +1,193 @@
+{% load staticfiles %}
+<style>
+  div {
+  	text-align: center;
+  	line-height: 40px;
+	font:25px;
+	font-family: Verdana,sans-serif;
+	float: left;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	
+}
+
+.ptitle {
+	margin-left:170px;
+	text-align:left;
+	width:70%;
+}
+
+.plist {
+	margin-left:170px;
+	text-align: left;
+	width:70%;
+}
+#A {
+	width:140px; 
+	height:45px; 
+	background-color:#abcdef;
+	margin-top: 15px;
+	margin-left:40px;
+	
+}
+#B {
+	width:140px; 
+	height:45px; 
+	background-color:#defabc;
+	margin-top: 15px;
+	margin-left: 15px;
+
+}
+#C {
+	width:140px; 
+	height:45px; 
+	background-color:#eacffd;
+	margin-top: 15px;
+	margin-left:15px;
+	
+}
+#D {
+	width:140px; 
+	height:45px; 
+	background-color:#fabcde;
+	margin-top: 15px;
+	margin-left: 15px;
+	
+}
+#E {
+  	width:140px; 
+	height:45px; 
+	background-color:#edd9c2;
+	margin-top: 15px;
+	margin-left: 15px;
+	
+}
+#log {
+  	width:140px; 
+	height:45px; 
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	margin-top: 15px;
+	margin-left: 185px;
+	text-decoration: none;
+	font-family: Tahoma, serif;
+	line-height: 40px;
+	background-color:#61615f;
+	color: #ffffff;
+}
+#sign {
+  	text-decoration: none;
+	font-family: Tahoma, serif;
+	line-height: 40px;
+	background-color:#eeeee4;
+	color: #000000; 
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	margin-top: 15px;
+	margin-left: 5px;
+	width:140px; 
+	height:45px; 
+	
+}
+.abc {
+	width:160px; 
+	height:50px; 
+	background-color:#ff7f7f;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius: 10px;
+	float: right;
+	
+	
+}
+a:hover {
+    	text-decoration: none;
+    	color: #b80054;
+    	font-family: Georgia, sans-serif;
+	font-weight: bold;
+	line-height: 50px;
+	font-size: 18px;
+}
+a {
+	text-decoration: none;
+    	color: #000000;
+    	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	line-height: 50px;
+	font-size: 18px;
+}
+#log a {
+	color: #ffffff;
+}
+#books {
+	height: 210px;
+	width: 230px;
+}
+#travel {
+	height: 210px;
+	width: 230px;
+}
+#tech {
+	height: 210px;
+	width: 230px;
+}
+#fashion {
+	height: 210px;
+	width: 230px;
+}
+#food {
+	height: 210px;
+	width: 230px;
+}
+#top {
+	height: 210px;
+	width: 230px;
+}
+
+table {
+    	position: absolute;
+	top: 120;
+	left: 250;
+	border-collapse: collapse;
+	border: none;
+	outline: none;
+}
+
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="style" href="style.css"/>
+	<title>GAMA</title>
+</head>
+<body background="http://3.bp.blogspot.com/-XvEinBN0OFA/Vb0u-VsbcHI/AAAAAAAAPQc/aVXZOL_UjKE/s1600/cute-vintage-backgrounds-tumblr-i0-vintage-backgrounds-tumblr.jpg">
+	<div id="A"><a href="">HOME</a></div>
+	<div id="B"><a href="">ABOUT US</a></div>
+	<div id="C"><a href="">COMMUNITY</a></div>
+	<div id="E"><a href="">REWARDS</a></div>
+  	<div id="D"><a href="">CONTACT US</a></div>
+	<div id="log"><a href="">LOGIN</a></a></div>
+	<div id="sign"><a href="">SIGN UP</a></div>
+	
+	<div class="page-header">
+		<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+	</div>
+	
+	{% block content %}
+	{% endblock %}
+	
+	<div class="abc" style="margin-top:100px; margin-right:0px"><a href="">BOOKS</a></div>
+	<div class="abc"style="margin-top:157px; margin-right:-161px"><a href="">FASHION</a></div>
+	<div class="abc"style="margin-top:214px; margin-right:-162px"><a href="">TECHNOLOGY</a></div>
+	<div class="abc"style="margin-top:271px; margin-right:-162px"><a href="">TRAVEL</a></div>
+	<div class="abc"style="margin-top:328px; margin-right:-163px"><a href="">FOOD</a></div>
+ 	
+	
+				
+		
+	
+
+	
+</body>
+</html>

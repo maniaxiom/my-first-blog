@@ -1,0 +1,46 @@
+
+<style>
+h2 {
+	text-align: center;
+	font-size: 50px;
+	font-family: Lucida Handwriting;
+}
+
+p {
+	font-size: 17px;
+	font-family:Lucida Calligraphy;
+	text-align: center;
+}
+body {
+	background-repeat: no-repeat;
+	background-size: 100% 100%; 
+}
+</style>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FOOD</title>
+	</head>
+	<body background="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT3BWCbEbS-Zj3AFcNKNjWtzTyJApFqqXJzanYDIf05fPf8SPNa" />
+		<h2>FOOD</h2>
+			<p>What is most enjoyable, is meeting people who have a real interest in food and</p>
+			<p style="margin-top:30px">sharing ideas with them. Good food is a global thing and I find that there is </p>
+			<p style="margin-top:30px">always something new and amazing to learn because there is no sincerer love than </p>
+			<p style="margin-top:37px">the love for food!</p>
+			
+			{% for post in posts %}
+		<div style="position:relative; left:2%;top: 15%">
+		<div class="plist">
+			
+			
+			<h1 style="text-align:center"><a href="{% url "post_details" pk=post.pk %}">{{ post.title }}</a></h1>
+			<p font-size=30px>{{ post.published_date }}	</p>
+			<p>{{ post.text|linebreaks }}</p>
+			<h4 style="color:#0000ff; text-align:center ">{{ post.tags }}</h4>
+		</div>
+		</div>
+		
+		
+		{% endfor %}
+	</body>
+</html>

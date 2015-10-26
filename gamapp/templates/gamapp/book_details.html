@@ -1,0 +1,53 @@
+
+<style>
+h1 {
+	font-size: 40px;
+	font-family:sans-serif;
+	text-align: center;
+}
+
+h2 {
+	text-align:center;
+	font-family: Lucida Handwriting;
+	font-size: 50px;
+}
+p {
+	margin-left:10px;
+	font-family:Lucida Calligraphy;
+	text-align: center;
+}
+</style>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body background="http://www.desktopwallpapers8.com/images/9069-books-wallpaper-hd-books-hd.jpg">
+	
+		<h2> BOOKS </h2>
+	
+		<div style="position:absolute; left:5%">
+			<h1>{{ post.title }}</b></h1>
+		</div>
+		
+		{% if post.published_date %}
+            <div style="position:absolute; left:5.2%; top:27%">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+		
+		<div style="position: absolute; right:4.2%; top: 20.5%" >
+        <a href="{% url "book_edit" pk=post.pk %}"><p font-size="10px">Edit Post</p></a>
+		</div>
+		
+		
+		
+		<div style="position: absolute; left:4.1%; top: 28%; right:4.1%; text-align:left">
+			<p>{{ post.text|linebreaks }}</p>
+		</div>
+
+
+			
+
+	</body>
+</html>

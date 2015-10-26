@@ -1,0 +1,55 @@
+
+<style>
+h2 {
+	text-align: center;
+	font-size: 50px;
+	font-family: Lucida Handwriting;
+	color: #000000;
+}
+
+p {
+	font-size: 17px;
+	font-family:Lucida Calligraphy;
+	text-align: center;
+}
+@media only screen and (max-width: 1500px) {
+body {
+	background: url(http://41.media.tumblr.com/tumblr_m9opgmhd7q1rfqfcao1_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+	}	
+}
+</style>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TRAVEL</title>
+	</head>
+	<body background="http://41.media.tumblr.com/tumblr_m9opgmhd7q1rfqfcao1_1280.jpg"/>
+		<h2>TRAVEL</h2>
+			<p>The use of traveling is to regulate imagination with reality, and instead of thinking</p> 
+			<p>of how things may be, see them as they are. This particular travel blog platform gives </p>
+			<p>the world of travelling and exploring a whole new dimension. With personal experiences, </p>
+			<p> classic timeless photos from around the world and much more, this place will let you</p>
+			<p> travel the world at just a click.</p>
+
+
+			{% for post in posts %}
+		<div style="position:relative; left:2%;top: 15%">
+		<div class="plist">
+			
+			
+			<h1 style="text-align:center"><a href="{% url "post_details" pk=post.pk %}">{{ post.title }}</a></h1>
+			<p font-size=30px>{{ post.published_date }}	</p>
+			<p>{{ post.text|linebreaks }}</p>
+			
+			<h4 style="color:#0000ff; text-align:center ">{{ post.tags }}</h4>
+		</div>
+		</div>
+		
+		
+		{% endfor %}
+			
+	</body>
+</html>

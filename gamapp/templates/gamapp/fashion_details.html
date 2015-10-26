@@ -1,0 +1,52 @@
+<style>
+h1{
+	color:#ffffff;
+}
+
+h2 {
+	margin-left: 500px;
+	font-family: Lucida Handwriting;
+	font-size: 50px;
+	opacity: 1;
+	color: #ffffff;
+}
+
+p {
+	margin-left:10px;
+	text-align: center;
+	opacity: 1;
+	color: #ffffff;
+}
+
+
+</style>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FASHION</title>
+	</head>
+	<body background="http://2.bp.blogspot.com/-l3C6DxKN_iQ/VU2tHd9DXqI/AAAAAAAADUQ/N8L6ZVt2MRs/s1600/brush-background.jpg" />
+		<h2>FASHION</h2>
+			
+			<div style="position:absolute; left:5%">
+			<h1>{{ post.title }}</b></h1>
+		</div>
+		
+		{% if post.published_date %}
+            <div style="position:absolute; left:5.2%; top:27%; color:ffffff">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+		
+		<div style="position: absolute; right:4.2%; top: 20.5%" >
+        <a href="{% url "fashion_edit" pk=post.pk %}"><p font-size="10px">Edit Post</p></a>
+		</div>
+		
+		
+		
+		<div style="position: absolute; left:4.1%; top: 28%; right:4.1%; text-align:left">
+			<p>{{ post.text|linebreaks }}</p>
+		</div>
+			
+	</body>
+</html>

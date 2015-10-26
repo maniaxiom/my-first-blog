@@ -1,0 +1,37 @@
+
+<style>
+h1 {
+	font-size: 40px;
+	font-family:sans-serif;
+	text-align: center;
+}
+p {
+	font-size: 17px;
+	font-family:Lucida Calligraphy;
+	text-align: center;
+}
+</style>
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="D:\gamatsafe\gamat\gamapp\templates\gamapp\logo.png"/>
+		<title>BOOK: EDIT POST</title>
+	</head>
+	<body background="http://www.desktopwallpapers8.com/images/9069-books-wallpaper-hd-books-hd.jpg">
+		<h1>ALL ABOUT THE BOOKS!</h2>
+		<p>Welcome bloggers and readers!!</p>
+		<p>This section is for all the bibliophiles and the talented writers who try shape the world of books</p>
+		<p>by their views, reviews and fun trivia.</p>
+		<p>This section boasts of many fun and intelligent blogs and mesmerizing photo blogs from bloggers around the world.</p>
+		<p>So come aboard and read, comment on and even write your own blogs and show your prowess as a writer.</p>
+		
+		<h1> New Blog Post </h1>
+	<form method="POST" class = "post-form">{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="save btn btn-default" style="position:absolute; left:50%"> Save Post </button>
+	</form>
+
+			
+
+	</body>
+</html>

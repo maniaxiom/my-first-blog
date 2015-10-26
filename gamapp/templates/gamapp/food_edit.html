@@ -1,0 +1,40 @@
+
+<style>
+h2 {
+	text-align: center;
+	font-size: 50px;
+	font-family: Lucida Handwriting;
+}
+
+p {
+	text-align: center;
+	font-size: 25px;
+	text-align: center;
+	font-family: cursive;
+}
+body {
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+</style>
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- pic -->
+		<link rel="icon";type="image/png";href="logo.png"/> <!-- pic -->
+		<title>FOOD</title>
+	</head>
+	<body background="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT3BWCbEbS-Zj3AFcNKNjWtzTyJApFqqXJzanYDIf05fPf8SPNa" />
+		<h2>FOOD</h2>
+			<p>What is most enjoyable, is meeting people who have a real interest in food and</p>
+			<p style="margin-top:30px">sharing ideas with them. Good food is a global thing and I find that there is </p>
+			<p style="margin-top:30px">always something new and amazing to learn because there is no sincerer love than </p>
+			<p style="margin-top:37px">the love for food!</p>
+			
+			<h1 style="position:absolute; left:43%; font-size:40px"> New Blog Post </h1>
+	<div style="position:absolute; top:68%; left:37%"><form method="POST" class = "post-form">{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="save btn btn-default" style="position:absolute; left:50%" >Save Post </button>
+	</form></div>
+	</body>
+</html>

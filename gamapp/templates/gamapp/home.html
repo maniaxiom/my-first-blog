@@ -1,0 +1,196 @@
+
+<style>
+  div {
+  	text-align: center;
+  	line-height: 40px;
+	font:25px;
+	font-family: Verdana,sans-serif;
+	float: left;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	
+}
+#A {
+	width:140px; 
+	height:45px; 
+	background-color:#abcdef;
+	margin-top: 15px;
+	margin-left:40px;
+	
+}
+#B {
+	width:140px; 
+	height:45px; 
+	background-color:#defabc;
+	margin-top: 15px;
+	margin-left: 15px;
+
+}
+#C {
+	width:140px; 
+	height:45px; 
+	background-color:#eacffd;
+	margin-top: 15px;
+	margin-left:15px;
+	
+}
+#D {
+	width:140px; 
+	height:45px; 
+	background-color:#fabcde;
+	margin-top: 15px;
+	margin-left: 15px;
+	
+}
+#E {
+  	width:140px; 
+	height:45px; 
+	background-color:#edd9c2;
+	margin-top: 15px;
+	margin-left: 15px;
+	
+}
+#log {
+  	width:140px; 
+	height:45px; 
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	position: absolute;
+	top: 5%;
+	left: 75%;
+	text-decoration: none;
+	font-family: Tahoma, serif;
+	line-height: 40px;
+	background-color:#61615f;
+	color: #ffffff;
+}
+#sign {
+  	text-decoration: none;
+	font-family: Tahoma, serif;
+	line-height: 40px;
+	background-color:#eeeee4;
+	color: #000000; 
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	position: absolute;
+	top: 5%;
+	left: 87%;
+	width:140px; 
+	height:45px; 
+	
+}
+.abc {
+	width:160px; 
+	height:50px; 
+	background-color:#ff7f7f;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius: 10px;
+	float: right;
+	top: 100px;
+	position:fixed;
+	left:86%;
+	
+	
+}
+a:hover {
+    	text-decoration: none;
+    	color: #b80054;
+    	font-family: Georgia, sans-serif;
+	font-weight: bold;
+	line-height: 50px;
+	font-size: 18px;
+}
+a {
+	text-decoration: none;
+    	color: #000000;
+    	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	line-height: 50px;
+	font-size: 18px;
+}
+#log a {
+	color: #ffffff;
+}
+#books {
+	height: 210px;
+	width: 230px;
+}
+#travel {
+	height: 210px;
+	width: 230px;
+}
+#tech {
+	height: 210px;
+	width: 230px;
+}
+#fashion {
+	height: 210px;
+	width: 230px;
+}
+#food {
+	height: 210px;
+	width: 230px;
+}
+#top {
+	height: 210px;
+	width: 230px;
+}
+
+table {
+    	position: absolute;
+	top: 120;
+	left: 250;
+	border-collapse: collapse;
+	border: none;
+	outline: none;
+}
+
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="style" href="style.css"/>
+	<title>GAMA</title>
+</head>
+<body background="http://3.bp.blogspot.com/-XvEinBN0OFA/Vb0u-VsbcHI/AAAAAAAAPQc/aVXZOL_UjKE/s1600/cute-vintage-backgrounds-tumblr-i0-vintage-backgrounds-tumblr.jpg">
+	<div id="A"><a href="">HOME</a></div>
+	<div id="B"><a href="{% url "about_us"%}">ABOUT US</a></div>
+	<div id="E"><a href="{% url "rewards" %}">REWARDS</a></div>
+  	<div id="D"><a href="{% url "contact_us" %}">CONTACT US</a></div>
+	
+	
+	<div class="abc" style="margin-top:100px; margin-right:0px"><a href="{% url "book_new" %}">BOOKS</a></div>
+	<div class="abc"style="margin-top:157px; margin-right:-161px"><a href="{% url "fashion_new" %}">FASHION</a></div>
+	<div class="abc"style="margin-top:214px; margin-right:-162px"><a href="{% url "technology_new" %}">TECHNOLOGY</a></div>
+	<div class="abc"style="margin-top:271px; margin-right:-162px"><a href="{% url "travel_new" %}">TRAVEL</a></div>
+	<div class="abc"style="margin-top:328px; margin-right:-163px"><a href="{% url "food_new" %}">FOOD</a></div>
+ 	
+	<table align="center">
+	<tbody>
+	    <table border="2px">
+		<thead>
+	        <th colspan="3" style="font-size:30px; font-family:sans-serif">BLOGS CATALOG</th>
+	    </thead>
+	    <tr>
+	        <td><img src="http://buzzsouthafrica.com/wp-content/uploads/blogs-2.jpg" id="top"/></td>
+			
+	        <td><a href="{% url "technology_list" %}"><img src="http://notenoughgood.com/wp-content/uploads/2012/12/tumblr_m4iih6kAsi1r97pmr.jpg" id="tech"/></a></td>
+		<td><a href="{% url "book_list"%}"><img src="http://3.bp.blogspot.com/-LYBH-xFfKf0/TfLlVGwBTxI/AAAAAAAACAo/L1AtYX6bPhg/s1600/tumblr_lmb8ijB6RC1qfd510o1_500_large.png" id="books"/></a></td>
+	    </tr>
+	    <tr>
+	        <td><a href="{% url "fashion_list" %}"><img src="http://40.media.tumblr.com/61e267110fcb16e78df8f318ab4307db/tumblr_mztnb7vZ1i1tqatpso1_500.png" id="fashion"/></a></td>
+	        <td><a href="{% url "food_list" %}"><img src="http://41.media.tumblr.com/tumblr_luptg4hyRb1qi23vmo1_500.jpg" id="food" /></a></td>
+	        <td><a href="{% url "travel_list" %}"><img src="http://41.media.tumblr.com/3ac681d8102f0c047b46ef1a98329d67/tumblr_mqxj3c26SI1rn7ll9o1_500.jpg" id="travel"/></a></td>
+	    </tr>
+	
+	</tbody>
+	</table>	
+				
+		
+	
+
+	
+</body>
+</html>
